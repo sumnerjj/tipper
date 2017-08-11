@@ -102,6 +102,24 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Bqa-KQ-K5L">
+            <objects>
+                <viewController id="Bmi-e4-mhd" customClass="SettingsViewController" customModule="tipper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DGr-90-ABd"/>
+                        <viewControllerLayoutGuide type="bottom" id="JzF-l0-mKV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v5i-Id-GSd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7u-7J-IZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1701" y="106"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kbt-V1-Dtk">
             <objects>
