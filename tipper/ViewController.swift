@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will appear")
+        
+        let defaults = UserDefaults.standard
+        let stringValue = defaults.object(forKey: "some_key_that_you_choose") as! String
+        let intValue = defaults.integer(forKey: "default_tip_value")
+        print(intValue)
+        tipControl.selectedSegmentIndex = intValue
+
     }
     
     override func viewDidAppear(_ animated: Bool) {

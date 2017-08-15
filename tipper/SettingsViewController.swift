@@ -9,6 +9,14 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+        let defaults = UserDefaults.standard
+        let intValue = defaults.integer(forKey: "default_tip_value")
+        print(intValue)
+        defSetter.selectedSegmentIndex = intValue
+    }
 
     @IBOutlet weak var defSetter: UISegmentedControl!
     override func viewDidLoad() {
@@ -24,6 +32,10 @@ class SettingsViewController: UIViewController {
     
     @IBAction func defSet(_ sender: Any) {
         print(defSetter.selectedSegmentIndex)
+        let defaults = UserDefaults.standard // Swift 3 syntax, previously NSUserDefaults.standardUserDefaults()
+        let defaultTipValue = defSetter.selectedSegmentIndex
+        defaults.set(defaultTipValue, forKey: "default_tip_value")
+        defaults.synchronize()
     }
 
     /*
