@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         let intValue = defaults.integer(forKey: "default_tip_value")
         print(intValue)
         tipControl.selectedSegmentIndex = intValue
+        self.calculateTip(nil);
 
     }
     
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
 
-    @IBAction func calculateTip(_ sender: Any) {
+    @IBAction func calculateTip(_ sender: Any?) {
         let tipPercentages = [0.18, 0.2, 0.25]
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
