@@ -16,12 +16,12 @@ class ViewController: UIViewController {
         print("view will appear")
         
         let defaults = UserDefaults.standard
-        let stringValue = defaults.object(forKey: "some_key_that_you_choose") as! String
         let intValue = defaults.integer(forKey: "default_tip_value")
         print(intValue)
         tipControl.selectedSegmentIndex = intValue
+        billField.text = defaults.object(forKey: "bill_value") as? String
         self.calculateTip(nil);
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,6 +65,8 @@ class ViewController: UIViewController {
         let total = bill + tip
         tipLabel.text = String(format: "%.2f", tip)
         totalLabel.text = String(format: "%.2f", total)
+        let defaults = UserDefaults.standard
+        defaults.set(billField.text, forKey: "bill_value")
         
     }
     
