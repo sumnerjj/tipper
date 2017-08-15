@@ -14,13 +14,13 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will appear")
-        
         let defaults = UserDefaults.standard
         let intValue = defaults.integer(forKey: "default_tip_value")
         print(intValue)
         tipControl.selectedSegmentIndex = intValue
         billField.text = defaults.object(forKey: "bill_value") as? String
         self.calculateTip(nil);
+        billField.becomeFirstResponder()
         
     }
     
