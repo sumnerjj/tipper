@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var defSetter: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +22,9 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func defSet(_ sender: Any) {
+        print(defSetter.selectedSegmentIndex)
+    }
 
     /*
     // MARK: - Navigation

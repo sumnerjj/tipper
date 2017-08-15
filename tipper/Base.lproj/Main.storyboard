@@ -119,9 +119,26 @@
                     <view key="view" contentMode="scaleToFill" id="v5i-Id-GSd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8I9-yo-Ntf">
+                                <rect key="frame" x="103" y="376" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="defSet:" destination="Bmi-e4-mhd" eventType="valueChanged" id="fyq-wp-uvS"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z7Z-8Q-zZr"/>
+                    <connections>
+                        <outlet property="defSetter" destination="8I9-yo-Ntf" id="J7N-X5-zTD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7u-7J-IZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
